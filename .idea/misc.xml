@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/asl_buddy/app/src/main/res/layout/activity_home_page.xml" value="0.1515625" />
+        <entry key="..\:/asl_buddy/app/src/main/res/layout/activity_login_page.xml" value="0.1515625" />
         <entry key="..\:/asl_buddy/app/src/main/res/layout/activity_main.xml" value="0.1515625" />
+        <entry key="..\:/asl_buddy/app/src/main/res/layout/activity_sign_up.xml" value="0.1515625" />
       </map>
     </option>
   </component>

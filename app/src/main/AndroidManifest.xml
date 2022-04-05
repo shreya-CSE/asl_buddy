@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Asl_buddy">
         <activity
+            android:name=".login_page"
+            android:exported="false" />
+        <activity
+            android:name=".home_page"
+            android:exported="false" />
+        <activity
+            android:name=".sign_up"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

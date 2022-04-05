@@ -21,13 +21,12 @@
         android:id="@+id/editTextTextEmailAddress2"
         android:layout_width="351dp"
         android:layout_height="72dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="172dp"
         android:ems="10"
         android:hint="Email Adress"
         android:inputType="textEmailAddress"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -35,13 +34,13 @@
         android:id="@+id/editTextTextPassword2"
         android:layout_width="344dp"
         android:layout_height="66dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
 
@@ -67,10 +66,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintVertical_bias="0.467" />
 
     <Button
         android:id="@+id/button5"

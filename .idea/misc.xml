@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/asl_buddy/app/src/main/res/layout/activity_home_page.xml" value="0.1515625" />
-        <entry key="..\:/asl_buddy/app/src/main/res/layout/activity_login_page.xml" value="0.1515625" />
+        <entry key="..\:/asl_buddy/app/src/main/res/layout/activity_intro_video.xml" value="0.1859375" />
+        <entry key="..\:/asl_buddy/app/src/main/res/layout/activity_login_page.xml" value="0.3333333333333333" />
         <entry key="..\:/asl_buddy/app/src/main/res/layout/activity_main.xml" value="0.1515625" />
         <entry key="..\:/asl_buddy/app/src/main/res/layout/activity_sign_up.xml" value="0.1515625" />
+        <entry key="..\:/asl_buddy/app/src/main/res/layout/activity_vocab.xml" value="0.1859375" />
       </map>
     </option>
   </component>

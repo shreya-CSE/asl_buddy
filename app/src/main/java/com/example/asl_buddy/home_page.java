@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class home_page extends AppCompatActivity {
+    //Added by Gabriel
 
     private ImageButton vocabu;
     @Override

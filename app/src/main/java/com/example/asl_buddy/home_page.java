@@ -9,7 +9,6 @@ import android.widget.ImageButton;
 
 public class home_page extends AppCompatActivity {
     //Added by Gabriel
-    // Test - Shreya
     private ImageButton vocabu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -64,6 +64,7 @@ public class intro_quiz1 extends AppCompatActivity implements View.OnClickListen
             case R.id.imageView7:
                 Toast.makeText(intro_quiz1.this,"Wrong answer!",Toast.LENGTH_LONG).show();
                 break;
+                //add counter
 
         }
 

@@ -1,18 +1,15 @@
 package com.example.asl_buddy;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class vocab extends AppCompatActivity {
 
-    private CheckBox intro;
-    private CheckBox ASL;
-    private CheckBox English;
-
+    private CheckBox intro, ASL, English, intro_quiz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,19 +25,25 @@ public class vocab extends AppCompatActivity {
             }
         });
 
-
-        ASL = findViewById(R.id.checkBox1);
-        ASL.setOnClickListener(new View.OnClickListener() {
+        intro_quiz = findViewById(R.id.checkBox5);
+        intro_quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+               Intent intro_quiz_intent= new Intent(getApplicationContext(), intro_quiz1.class);
+               startActivity(intro_quiz_intent);
             }
-
-
         });
 
 
-        English = findViewById(R.id.checkBox2);
+        ASL = findViewById(R.id.checkBox1);
+        ASL.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+            }
+        });
+
+
+        English = findViewById(R.id.checkBox3);
         English.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 

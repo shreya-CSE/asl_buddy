@@ -9,14 +9,15 @@
     android:backgroundTintMode="src_over"
     tools:context=".vocab">
 
+
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="285dp"
         android:layout_height="70dp"
-        android:layout_marginTop="16dp"
-        android:text="1. Introduction"
+        android:layout_marginTop="88dp"
+        android:text="@string/_1_introduction"
         android:textColor="#000000"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,26 +27,40 @@
         android:id="@+id/checkBox1"
         android:layout_width="285dp"
         android:layout_height="70dp"
-        android:layout_marginTop="100dp"
-        android:text="2. ASL to English"
+        android:layout_marginTop="264dp"
+        android:text="@string/_3_asl_to_english"
         android:textColor="#000000"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/checkBox3"
         android:layout_width="285dp"
         android:layout_height="70dp"
-        android:layout_marginTop="188dp"
-        android:text="3. English to ASL"
+        android:layout_marginTop="352dp"
+        android:text="@string/_4_english_to_asl"
         android:textColor="#000000"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="285dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/_2_introduction_quiz"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

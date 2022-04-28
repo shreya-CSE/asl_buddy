@@ -10,6 +10,7 @@ import android.widget.CheckBox;
 public class vocab extends AppCompatActivity {
 
     private CheckBox intro;
+    private CheckBox introquiz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,15 @@ public class vocab extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intro_intent=new Intent(getApplicationContext(),intro_video.class);
                 startActivity(intro_intent);
+            }
+        });
+
+        introquiz=findViewById(R.id.checkBox2);
+        introquiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intro_quizintent=new Intent(getApplicationContext(),intro_quiz1.class);
+                startActivity(intro_quizintent);
             }
         });
 

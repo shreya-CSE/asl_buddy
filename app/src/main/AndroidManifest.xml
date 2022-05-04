@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Asl_buddy"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".translatorResult"
+            android:exported="false" />
+        <activity
             android:name=".translator"
             android:exported="false" />
         <activity

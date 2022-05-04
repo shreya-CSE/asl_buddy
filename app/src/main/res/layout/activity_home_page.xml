@@ -29,7 +29,7 @@
         app:srcCompat="@drawable/vocabulary" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/translateButton"
         android:layout_width="360dp"
         android:layout_height="106dp"
         android:text="ASL TRANSLATOR"

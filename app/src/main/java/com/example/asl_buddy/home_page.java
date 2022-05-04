@@ -5,21 +5,35 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class home_page extends AppCompatActivity {  //test
-    //Added by Gabriel
+
     private ImageButton vocabu;
+    private Button translate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+        //Vocab button
         vocabu=findViewById(R.id.imageButton);
         vocabu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent vocabu_intent=new Intent(getApplicationContext(),vocab.class);
                 startActivity(vocabu_intent);
+            }
+        });
+
+        //Translate button
+        translate = findViewById(R.id.translateButton);
+        translate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent translate_intent = new Intent(getApplicationContext(), translator.class);
+                startActivity(translate_intent);
             }
         });
 

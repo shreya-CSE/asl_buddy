@@ -25,21 +25,6 @@ public class translatorResult extends AppCompatActivity {
 
         engText = (String) getIntent().getStringExtra("data");
 
-//---------------------------
-        //Testing vocabulary class
-        Vocabulary vocab = new Vocabulary();
-
-        ArrayList<String> test = vocab.getVocab();
-
-        if (test.isEmpty())
-            System.out.println("Bad");
-        else {
-            System.out.println("Good!");
-            System.out.println(test.get(0));
-        }
-        //-------------------
-
-
         //Convert to lowercase
         engText = engText.toLowerCase(Locale.ROOT);
 
@@ -56,67 +41,28 @@ public class translatorResult extends AppCompatActivity {
             System.out.println("No input");
         }
         else {
-            translate(input);
+            //Access vocab class
+            Vocabulary vocab = new Vocabulary(this);
+            //Lookup vocab entries
+            ArrayList<String> found = vocab.lookup(input);
+
+            //If input doesn't match ANY vocabulary entries
+            if (found.isEmpty()) {
+                //Inform that there wasn't anything found
+            }
+            //Pass available words to be displayed
+            else {
+                for (int i = 0; i < found.size(); i++) {
+                    System.out.println("Found: " + found.get(i));
+                }
+                //displayResults(found, original sentence)
+            }
         }
 
     }
 
-    private void translate(String input) {
-        //Break string into individual pieces
-        String[] words = input.split(" ");
+    private void displayResults(String input) {
 
-        //Get available words from assets/availableWords.txt
-        String availableWords = "";
-        try {
-            InputStream is = getAssets().open("availableWords.txt");
-            byte[] buffer = new byte[is.available()];
-            is.read(buffer);
-            is.close();
-            availableWords = new String(buffer);
-        } catch (IOException e) {
-            availableWords = "ERROR";
-            e.printStackTrace();
-        }
-
-        //Find matching words and add them to list. Mark words not found
-        ArrayList<String> found = new ArrayList<String>();
-        ArrayList<String> notFound = new ArrayList<String>();
-        for (int i = 0; i < words.length; i++) {
-            //If available
-            if (availableWords.indexOf(words[i]) != -1) {
-                //Are there multiple?
-                found.add(words[i]);
-
-                int num = 1;
-                Boolean multiple = true;
-
-                while (multiple) {
-                    String next = words[i] + Integer.toString(num);
-
-                    //If there are multiple
-                    if (availableWords.indexOf(next) != -1) {
-                        found.add(next);
-                        num++;
-                    }
-                    else {
-                        multiple = false;
-                    }
-                }
-            }
-            //Mark as not found
-            else {
-                notFound.add(words[i]);
-            }
-        }
-
-        if (found.isEmpty()) {
-            System.out.println("No matches");
-        }
-        else {
-            for (int i = 0; i < found.size(); i++) {
-                System.out.println(found.get(i));
-            }
-        }
 
         layoutY = findViewById(R.id.yLayout);
 

@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         setContentView(R.layout.activity_main);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-        googleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this, 'onConnectionFailedListener:', this)
+        googleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this,  'onConnectionFailedListener:', this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso).build();
         signInButton = findViewById(R.id.google_sign_in);
         signInButton.setOnClickListener(new View.OnClickListener() {

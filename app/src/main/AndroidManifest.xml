@@ -13,10 +13,7 @@
         android:theme="@style/Theme.Asl_buddy"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".translatorResult"
-            android:exported="false" />
-        <activity
-            android:name=".translator"
+            android:name=".ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".intro_quiz1"

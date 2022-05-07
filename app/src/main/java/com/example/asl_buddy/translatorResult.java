@@ -36,7 +36,7 @@ public class translatorResult extends AppCompatActivity {
 
         //Convert to lowercase
         engText = engText.toLowerCase(Locale.ROOT);
-
+        Toast.makeText(getApplicationContext(), engText, Toast.LENGTH_LONG).show();
         //Remove punctuation (,.!?)
         String input = new String("");
         for (int i = 0; i < engText.length(); i++) {

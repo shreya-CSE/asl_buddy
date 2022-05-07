@@ -32,8 +32,6 @@ public class ProfileActivity extends AppCompatActivity implements GoogleApiClien
     private GoogleSignInOptions gso;
     private GoogleApiClient googleApiClient;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,4 +1,14 @@
 hello
+hello1
+goodbye
+where
+where1
 big
 big1
 big2
+help
+help1
+food
+house
+no
+see

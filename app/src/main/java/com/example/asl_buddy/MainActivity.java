@@ -28,6 +28,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //TEMP to immediately skip to homepage
+        Intent toHome = new Intent(getApplicationContext(),home_page.class);
+        startActivity(toHome);
+        // TEMP ------------------------------------------------------------
+
+        /*
+
         setContentView(R.layout.activity_main);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
@@ -66,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                                           }
 
         );
+         */
     }
 
     @Override

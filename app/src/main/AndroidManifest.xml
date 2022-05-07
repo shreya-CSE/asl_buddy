@@ -3,6 +3,9 @@
     package="com.example.asl_buddy">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature
+        android:name="android.permission.RECORD_AUDIO"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Asl_buddy"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".MagnifySymbol"
+            android:exported="false" />
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
@@ -32,6 +38,12 @@
             android:exported="false" />
         <activity
             android:name=".sign_up"
+            android:exported="false" />
+        <activity
+            android:name=".translator"
+            android:exported="false" />
+        <activity
+            android:name=".translatorResult"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

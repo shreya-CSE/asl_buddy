@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Array;
@@ -72,6 +74,13 @@ public class translatorResult extends AppCompatActivity {
             message.setTextSize(36);
             message.setPadding(100, 100, 100, 100);
             message.setTypeface(Typeface.MONOSPACE, Typeface.BOLD);
+            //-------------
+            // Make it center aligned not right aligned
+
+
+            //
+
+
 
             layoutY.addView(message);
         }
@@ -113,7 +122,29 @@ public class translatorResult extends AppCompatActivity {
                     }
                 }
 
-                //Create rows
+                //-- v Create rows v --
+
+                //Make first letter capital in word to display
+                String tmp = "" + currentWord.charAt(0);
+                tmp = tmp.toUpperCase();
+                String capWord = new String();
+                if (currentWord.length() > 1) {
+                    capWord = tmp + currentWord.substring(1);
+                }
+                else {
+                    capWord = tmp;
+                }
+
+                //Add text to beginning
+                TextView name = new TextView(this);
+                name.setText(capWord);
+                name.setTextColor(Color.WHITE);
+                name.setTextSize(24);
+                name.setPadding(100, 100, 100, 100);
+                name.setTypeface(Typeface.MONOSPACE, Typeface.BOLD);
+                layoutX.addView(name);
+
+                //Put pictures in row
                 for (int k = 0; k < numPictures; k++) {
                     ImageButton symbol = new ImageButton(this);
                     symbol.setMaxHeight(800);
@@ -135,6 +166,7 @@ public class translatorResult extends AppCompatActivity {
 
                     layoutX.addView(symbol);
                 }
+                //-- ^ Create rows ^ --
 
                 layoutY.addView(scrollX);
             }

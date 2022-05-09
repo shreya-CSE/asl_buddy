@@ -1,5 +1,6 @@
 package com.example.asl_buddy;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -25,6 +26,7 @@ public class home_page extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
 
         //Vocab button
         vocabu=findViewById(R.id.imageButton);
@@ -58,10 +60,12 @@ public class home_page extends AppCompatActivity implements View.OnClickListener
             // ...
             case R.id.button10:
                 signOut();
+                //startActivity(new Intent(home_page.this,MainActivity.class));
                 break;
+            }
+        //break;
             // ...
         }
-    }
 
     private void signOut() {
         mGoogleSignInClient.signOut()

@@ -24,6 +24,8 @@ public class intro_quiz1 extends AppCompatActivity implements View.OnClickListen
     private ImageView wrong2;
     private ImageView wrong3;
     private MediaPlayer bonky;
+    private MediaPlayer correct;
+    private MediaPlayer passed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,24 +49,28 @@ public class intro_quiz1 extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v)
     {
         bonky=MediaPlayer.create(this,R.raw.bonk);
+        correct=MediaPlayer.create(this,R.raw.correct);
         switch (v.getId())
         {
 
             case R.id.imageButton3:
-                bonky.start();
-                Toast.makeText(intro_quiz1.this,"Correct answer! Quiz Passed",Toast.LENGTH_LONG).show();
-                startActivity(new Intent(intro_quiz1.this,vocab.class));
+                correct.start();
+                Toast.makeText(intro_quiz1.this,"Correct answer!",Toast.LENGTH_LONG).show();
+                startActivity(new  Intent(intro_quiz1.this,question2.class));
                 break;
 
             case R.id.imageView3:
+                bonky.start();
             Toast.makeText(intro_quiz1.this,"Wrong answer!",Toast.LENGTH_LONG).show();
             break;
 
             case R.id.imageView4:
+                bonky.start();
                 Toast.makeText(intro_quiz1.this,"Wrong answer!",Toast.LENGTH_LONG).show();
                 break;
 
             case R.id.imageView7:
+                bonky.start();
                 Toast.makeText(intro_quiz1.this,"Wrong answer!",Toast.LENGTH_LONG).show();
                 break;
                 //add counter

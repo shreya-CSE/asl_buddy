@@ -3,6 +3,7 @@
     package="com.example.asl_buddy">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature
         android:name="android.permission.RECORD_AUDIO"
         android:required="false" />
@@ -15,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Asl_buddy"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".question2"
+            android:exported="false" />
         <activity
             android:name=".MagnifySymbol"
             android:exported="false" />

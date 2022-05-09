@@ -3,6 +3,7 @@ package com.example.asl_buddy;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +23,7 @@ public class intro_quiz1 extends AppCompatActivity implements View.OnClickListen
     private ImageView wrong1;
     private ImageView wrong2;
     private ImageView wrong3;
+    private MediaPlayer bonky;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,11 +46,12 @@ public class intro_quiz1 extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v)
     {
-
+        bonky=MediaPlayer.create(this,R.raw.bonk);
         switch (v.getId())
         {
 
             case R.id.imageButton3:
+                bonky.start();
                 Toast.makeText(intro_quiz1.this,"Correct answer! Quiz Passed",Toast.LENGTH_LONG).show();
                 startActivity(new Intent(intro_quiz1.this,vocab.class));
                 break;
